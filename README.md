@@ -1,15 +1,15 @@
-# [cite_start]Teachers' Assessment-02 A [cite: 4]
-[cite_start]**Course:** Database Management Systems [cite: 3]
-[cite_start]**Topic:** Extendible Hashing [cite: 6]
-[cite_start]**Roll Number (RN):** 14 [cite: 11]
+# Teachers' Assessment-02 A
+**Course:** Database Management Systems
+**Topic:** Extendible Hashing
+**Roll Number (RN):** 14
 
 ---
 
 ## 1. Initial Setup and Set Formulation
 
-[cite_start]As per the instructions, the initial key set is modified by substituting the roll number (RN = 14)[cite: 10, 11, 23].
+As per the instructions, the initial key set is modified by substituting the roll number (RN = 14).
 
-[cite_start]**Original Set:** K = {69, 22, 16, 27, 50, 23, RN, 70, 25} [cite: 10]
+**Original Set:** K = {69, 22, 16, 27, 50, 23, RN, 70, 25}
 
 **Modified Set:** K = {69, 22, 16, 27, 50, 23, **14**, 70, 25}
 
@@ -20,8 +20,8 @@
 ## 2. Step-by-Step Insertion Process
 
 **Initial State:** Global Depth (GD) = 1
-* [cite_start]Directory `0` -> Bucket 0 (LD=1): [24, 30, 88] [cite: 13, 14, 15, 16]
-* [cite_start]Directory `1` -> Bucket 1 (LD=1): [49, 87, 29] [cite: 17, 19, 20, 21]
+* Directory `0` -> Bucket 0 (LD=1): [24, 30, 88]
+* Directory `1` -> Bucket 1 (LD=1): [49, 87, 29]
 
 **Step 1: Insert 69** (Binary: 1000101 -> ends in `01`)
 * Maps to `1`. Bucket is full. 
@@ -55,13 +55,13 @@
 * Maps to `10`. Bucket is full. 
 * Split Bucket `10` (Local Depth becomes 3). Global Depth becomes 3.
 * `010` -> [50]
-* [cite_start]`110` -> [30, 22, **==14==**] *(Insertion of RN Highlighted)* [cite: 24]
+* `110` -> [30, 22, **==14==**] *(Insertion of RN Highlighted)*
 
 **Step 8: Insert 70** (Binary: 1000110 -> ends in `110`)
 * Maps to `110`. Bucket is full. 
 * Split Bucket `110` (Local Depth becomes 4). Global Depth becomes 4.
 * `0110` -> [22, 70]
-* [cite_start]`1110` -> [30, **==14==**] *(Insertion of RN Highlighted)* [cite: 24]
+* `1110` -> [30, **==14==**] *(Insertion of RN Highlighted)*
 
 **Step 9: Insert 25** (Binary: 11001 -> ends in `001`)
 * Maps to `01`. Bucket is full. 
@@ -75,7 +75,6 @@
 
 **GLOBAL DEPTH = 4**
 
-```text
 Directory                               Buckets (Capacity = 3)
 ---------                               ----------------------
 [0000] \
